@@ -1,0 +1,261 @@
+﻿/* Body. */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 10px 20px;
+    background-color: #dddde0;
+}
+
+/* Links. */
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+/* Window. */
+
+#window {
+    border: #000 1px solid;
+    background-color: #fff;
+    padding: 7px;
+    width: 98%;
+}
+
+/* Page title. */
+
+#pageTitle {
+    background-color: #097099;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0 5px 5px;
+    width: 99%;
+    font-weight: bold;
+}
+
+/* Texto de entrada */
+.custom-textbox {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-textbox:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 0 0 2px rgba(100, 100, 255, 0.2);
+}
+
+
+
+/*dropdown*/
+
+.custom-dropdown {
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/path/to/arrow.svg'); /* opcional */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+    .custom-dropdown:focus {
+        outline: none;
+        border-color: #999;
+        box-shadow: 0 0 0 2px rgba(100, 100, 255, 0.2);
+    }
+
+
+/* Menu. */
+
+#menu {
+    background-color: #094069;
+    color: #fff;
+    text-align: left;
+    padding: 5px 0 5px 5px;
+    width: 99%;
+}
+
+#menuWelcome {
+    font-weight: bold;
+}
+
+#menuLinks a {
+    color: #fffac6;
+}
+
+/* Content. */
+
+#content {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+p.info {
+    font-size: 16px;
+}
+
+/* Forms. */
+
+form {
+    width: 100%;
+}
+
+div.field {
+    clear: both;
+    padding-top: 1em;
+    width: 100%;
+}
+
+    div.field span.label {
+        float: left;
+        text-align: right;
+        font-weight: bold;
+        vertical-align: middle;
+        padding-top: 0.3em;
+        width: 49.5%;
+    }
+
+    div.field span.entry {
+        float: right;
+        text-align: left;
+        width: 49.5%;
+    }
+
+div.checkbox {
+    clear: both;
+    padding-top: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+div.button {
+    clear: both;
+    padding-top: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+input, select, textarea {
+    background-color: #f4f4f4;
+}
+
+/* Error messages. */
+
+.errorMessage {
+    font-weight: bold;
+    color: red;
+    margin-left: 5px;
+}
+
+/* Footer. */
+
+#footer {
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+}
+
+
+.custom-btn {
+    width: auto; 
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    padding: 15px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+    .custom-btn:hover {
+        transform: scale(1.02); 
+    }
+
+    .cancel-button {
+        margin-left: 10px;
+        background-color: #ddd;
+        border: 1px solid #bbb;
+        color: #333;
+    }
+
+
+    /* Estilos para la tabla del carrito */
+    .table {
+        margin: 30px auto; /* Centrar horizontalmente */
+        width: 80%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Encabezados */
+    .table th {
+        background-color: #097099;
+        color: white;
+        text-align: left;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Filas */
+    .table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+
+    /* Fila al pasar el mouse */
+    .table tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    /* Estilo para los botones de acciones */
+    .table button,
+    .table input[type="submit"] {
+        margin-right: 5px;
+        padding: 6px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        background-color: #094069;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .table button:hover,
+    .table input[type="submit"]:hover {
+        background-color: #0a5d8d;
+    }
