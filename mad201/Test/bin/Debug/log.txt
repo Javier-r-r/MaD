@@ -1,0 +1,320 @@
+----------------------------------------
+Timestamp: 18/04/2025 15:34:10
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION EntityException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION EntityException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION EntityException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION ArgumentException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION EntityException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for List`1 ProductService.ViewAllProperties(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for List`1 ProductService.ViewAllProperties(...) with EXCEPTION EntityException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception STARTS for ProductDto ProductService.FindByProductName(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:34:21
+Message: Transactional interception ENDS for ProductDto ProductService.FindByProductName(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:48
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION ArgumentException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for List`1 ProductService.ViewAllProperties(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for List`1 ProductService.ViewAllProperties(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception STARTS for ProductDto ProductService.FindByProductName(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:37:50
+Message: Transactional interception ENDS for ProductDto ProductService.FindByProductName(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:49
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:49
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION ArgumentException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for List`1 ProductService.ViewAllProperties(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for List`1 ProductService.ViewAllProperties(...) with EXCEPTION EntityCommandCompilationException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception STARTS for ProductDto ProductService.FindByProductName(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:40:50
+Message: Transactional interception ENDS for ProductDto ProductService.FindByProductName(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION MappingException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION MappingException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION MappingException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.FindPropertiesByProductId(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.FindPropertiesByProductId(...) with EXCEPTION ArgumentException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.SearchFilters(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.SearchFilters(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.FindByProductCategory(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.FindByProductCategory(...) with EXCEPTION MappingException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for List`1 ProductService.ViewAllProperties(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for List`1 ProductService.ViewAllProperties(...) with EXCEPTION MappingException
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception STARTS for ProductDto ProductService.FindByProductName(...)
+
+----------------------------------------
+----------------------------------------
+Timestamp: 18/04/2025 15:57:11
+Message: Transactional interception ENDS for ProductDto ProductService.FindByProductName(...) with EXCEPTION ArgumentNullException
+
+----------------------------------------
