@@ -1,0 +1,46 @@
+@startuml Diagrama de Clases para ClientService
+' DTO
+class ClientDto {
+}
+
+interface IClientService {
+    -UserDao: IUserDao
+    -ClientDao: IClientDao
+    -BankCardDao: IBankCardDao
+    --
+    +RegisterClient(loginName: string, clearPassword: string, name: string, address: string, email: string, surname: string, language: string, country: string): long
+    +AddBankCard(clientId: long, creditType: string, bankCardNumber: long, name: string, cvv: int, expirationDate: DateTime): BankCard
+    +SetBankCardAsDefault(bankCardId: long): void
+    +RemoveBankCard(bankCardId: long): void
+    +FindBankCardsByClientId(clientId: long, pageNumber: int, pageSize: int): PagedResult<BankCardDetails>
+    +FindByClientId(clientId: long): Client
+    +FindBankCardById(bankCardId: long): BankCard
+    +FindAllBankCardsByClientId(clientId : long): List<BankCardDetails>
+    +UpdateBankCard(bankCardId: long, creditType: string, bankCardNumber: long, name: string, cvv: int, expirationDate: DateTime): void
+    +UpdateClientProfile(userId: long, name: string, surname: string, email: string, language: string, country: string): void
+}
+
+class ClientService {
+}
+
+class BankCardDetails {
+}
+
+class InvalidCardNumberException {
+}
+
+class DuplicatedBankCardException {
+}
+
+class CardAlreadyExpiredException {
+}
+
+ClientService ..|> IClientService
+ClientService ..> ClientDto : usa
+ClientService ..> BankCardDetails : usa
+ClientService ..> InvalidCardNumberException : lanza
+ClientService ..> DuplicatedBankCardException : lanza
+ClientService ..> CardAlreadyExpiredException : lanza
+
+IClientService ..> ClientDto
+@enduml

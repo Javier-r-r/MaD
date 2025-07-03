@@ -1,0 +1,43 @@
+@startuml Diagrama de Clases para RestaurantService
+
+interface IRestaurantService {
+    -RestaurantDao: IRestaurantDao
+    -UserDao: IUserDao
+    -ProductDao: IProductDao
+    --
+    +RegisterRestaurant(loginName: String, clearPassword: String, name: String, address: String, email: String, schedule: String, RestaurantType: String, language: String, country: String): long
+    +listRestaurants(pageNumber: int, pageSize: int): PagedResult<Restaurant>
+    +listRestaurantsFilterByType(type: string, pageNumber: int, pageSize: int): PagedResult<Restaurant>
+    +getRestaurantTypes(): List<string>
+    +listRestaurantProducts(restaurantId: long, pageNumber: int, pageSize: int): PagedResult<Product>
+    +listRestaurantProductsFilterByCategoryAndKeywords(categoryId: long, keywords: string, restaurantId: long, pageNumber: int, pageSize: int): PagedResult<Product>
+    +AddProduct(restaurantId: long, productName: String, price: double, creationDate: DateTime, stock: int, category: String, specificProperty: List<ProductProperty>): long
+    +FindProduct(productId: long): Product
+    +UpdateProduct(productId: long, productName: String, price: double, creationDate: DateTime, stock: int, category: String, specificProperty: List<ProductProperty>): void
+    +DeleteProduct(product: long): void
+    +AddProductCategory(categoryName: String): long
+    +FindAllCategories(): List<Category>
+    +FindAllSpecificProperties(): List<Property>
+    +FindRestaurantById(restaurantId: long): Restaurant
+    +UpdateRestaurantProfile(userId: long, name: string, email: string, schedule: string, type: string, language: string, country: string): void
+    +RemoveProperty(propertyId: long): void
+}
+
+class RestaurantService {
+}
+
+class CategoryAlreadyExistsException {
+}
+
+class RestaurantAlreadyExistsException {
+}
+
+class ProductAlreadyExistsException {
+}
+
+RestaurantService ..|> IRestaurantService
+RestaurantService ..> CategoryAlreadyExistsException : lanza
+RestaurantService ..> RestaurantAlreadyExistsException : lanza
+RestaurantService ..> ProductAlreadyExistsException : lanza
+
+@enduml

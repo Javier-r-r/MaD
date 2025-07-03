@@ -1,0 +1,38 @@
+@startuml Diagrama de Clases para UMLProductService
+' DTO
+class ProductDto {
+    -id : long
+    -name : string
+    -price : double
+    -creationDate : DateTime
+    -stock : int
+}
+
+interface IProductService {
+    -productDao: IProductDao
+    -propertyDao: IPropertyDao
+    --
+    +FindByProductName(productName: string): ProductDto
+    +FindByProductCategory(categoryId: long, pageNumber: int, pageSize: int): List<ProductDto>
+    +SearchFilters(restaurantId: long, pageNumber: int, categoryId: long, name: string): List<ProductDto>
+    +FindPropertiesByProductId(productId: long, pageNumber: int, pageSize: int): List<Property>
+    +ViewAllProperties(): List<Property>
+}
+
+class ProductService {
+    -productDao: IProductDao
+    -propertyDao: IPropertyDao
+    --
+    +FindByProductName(productName: string): ProductDto
+    +FindByProductCategory(categoryId: long, pageNumber: int, pageSize: int): List<ProductDto>
+    +SearchFilters(restaurantId: long, pageNumber: int, categoryId: long, name: string): List<ProductDto>
+    +FindPropertiesByProductId(productId: long, pageNumber: int, pageSize: int): List<Property>
+    +ViewAllProperties(): List<Property>
+    -FromProduct(product: Product): ProductDto
+    -ConvertToProductDto(products: List<Product>): List<ProductDto>
+}
+
+ProductService ..|> IProductService
+ProductService ..> ProductDto : usa
+
+IProductService ..> ProductDto

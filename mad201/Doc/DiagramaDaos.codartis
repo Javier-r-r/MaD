@@ -1,0 +1,821 @@
+﻿{
+  "Version": 2,
+  "Properties": {
+    "AreNodeDescriptionsVisible": "True"
+  },
+  "Nodes": [
+    {
+      "Id": "15",
+      "Name": "Model.Daos.ProductDao",
+      "Stereotype": "Namespace",
+      "CreatedAtUtc": "2025-05-07T18:02:22.9789624Z",
+      "AbsoluteTopLeft": "-100.2059,-483.9475",
+      "HeaderContentSize": "343.0567,27",
+      "PreferredHeaderSize": "224.84,27",
+      "Tooltip": "namespace Model.Daos.ProductDao\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "343.0567,431.6",
+      "ChildrenAreaTopLeft": "1,27",
+      "ChildrenAreaSize": "341.0567,403.6",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "RoslynNamespace",
+        "SymbolName": "ProductDao",
+        "FullyQualifiedName": "Model.Daos.ProductDao",
+        "FullName": "namespace Model.Daos.ProductDao",
+        "Symbols": [
+          "{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode",
+        "NamespaceLevel": 3
+      }
+    },
+    {
+      "Id": "16",
+      "ParentId": "15",
+      "Name": "IProductDao",
+      "Stereotype": "Interface",
+      "CreatedAtUtc": "2025-05-07T18:02:22.9789624Z",
+      "AbsoluteTopLeft": "-79.2059,-436.9475",
+      "HeaderContentSize": "301.0567,50",
+      "PreferredHeaderSize": "81.4533,39.4",
+      "Tooltip": "interface Model.Daos.ProductDao.IProductDao\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "301.0567,166",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "299.0567,115",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "IProductDao",
+        "FullName": "interface Model.Daos.ProductDao.IProductDao",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "21",
+      "ParentId": "16",
+      "Name": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:02:55.4524470Z",
+      "AbsoluteTopLeft": "-78.2059,-386.9475",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "295.86,23",
+      "Tooltip": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductCategory",
+        "FullName": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductCategory(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "22",
+      "ParentId": "16",
+      "Name": "Product FindByProductName(string productName)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:02:56.3174047Z",
+      "AbsoluteTopLeft": "-78.2059,-363.9475",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "297.1167,23",
+      "Tooltip": "Product FindByProductName(string productName)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductName",
+        "FullName": "Product FindByProductName(string productName)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductName(string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "Description": "Finds a product by its name",
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "23",
+      "ParentId": "16",
+      "Name": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:02:57.0629974Z",
+      "AbsoluteTopLeft": "-78.2059,-340.9475",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "297.4333,23",
+      "Tooltip": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByRestaurant",
+        "FullName": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByRestaurant(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "24",
+      "ParentId": "16",
+      "Name": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:02:57.9325554Z",
+      "AbsoluteTopLeft": "-78.2059,-317.9475",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "299.0567,23",
+      "Tooltip": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindPropertiesByProductId",
+        "FullName": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindPropertiesByProductId(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "25",
+      "ParentId": "16",
+      "Name": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:02:58.5234505Z",
+      "AbsoluteTopLeft": "-78.2059,-294.9475",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "298.6033,23",
+      "Tooltip": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "SearchFilters",
+        "FullName": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"SearchFilters(long, int, int, long, string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "17",
+      "ParentId": "15",
+      "Name": "ProductDaoImpl",
+      "Stereotype": "Class",
+      "CreatedAtUtc": "2025-05-07T18:02:22.9799648Z",
+      "AbsoluteTopLeft": "-79.2059,-239.3476",
+      "HeaderContentSize": "301.0567,50",
+      "PreferredHeaderSize": "103.8433,39.4",
+      "Tooltip": "class Model.Daos.ProductDao.ProductDaoImpl\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "301.0567,166",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "299.0567,115",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "ProductDaoImpl",
+        "FullName": "class Model.Daos.ProductDao.ProductDaoImpl",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "26",
+      "ParentId": "17",
+      "Name": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:01.4447765Z",
+      "AbsoluteTopLeft": "-78.2059,-189.3476",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "295.86,23",
+      "Tooltip": "public PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductCategory",
+        "FullName": "public PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductCategory(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "27",
+      "ParentId": "17",
+      "Name": "Product FindByProductName(string productName)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:02.3829219Z",
+      "AbsoluteTopLeft": "-78.2059,-166.3476",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "297.1167,23",
+      "Tooltip": "public Product FindByProductName(string productName)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductName",
+        "FullName": "public Product FindByProductName(string productName)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductName(string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "28",
+      "ParentId": "17",
+      "Name": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:03.3023666Z",
+      "AbsoluteTopLeft": "-78.2059,-143.3476",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "297.4333,23",
+      "Tooltip": "public PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByRestaurant",
+        "FullName": "public PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByRestaurant(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "29",
+      "ParentId": "17",
+      "Name": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:04.0513742Z",
+      "AbsoluteTopLeft": "-78.2059,-120.3476",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "299.0567,23",
+      "Tooltip": "public PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindPropertiesByProductId",
+        "FullName": "public PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindPropertiesByProductId(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "30",
+      "ParentId": "17",
+      "Name": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:04.8407169Z",
+      "AbsoluteTopLeft": "-78.2059,-97.3476",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "298.6033,23",
+      "Tooltip": "public PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId = 0, string name = \"\")",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "SearchFilters",
+        "FullName": "public PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId = 0, string name = \"\")",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"SearchFilters(long, int, int, long, string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "20",
+      "Name": "ModelUtil (2.0.2.1)",
+      "Stereotype": "Assembly",
+      "CreatedAtUtc": "2025-05-07T18:02:48.6168113Z",
+      "AbsoluteTopLeft": "332.8507,-524.156",
+      "HeaderContentSize": "290.54,27",
+      "PreferredHeaderSize": "162.3867,27",
+      "Tooltip": "assembly: ModelUtil, Version=2.0.2.1, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "290.54,595",
+      "ChildrenAreaTopLeft": "1,27",
+      "ChildrenAreaSize": "288.54,567",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "ModelUtil",
+        "FullName": "assembly: ModelUtil, Version=2.0.2.1, Culture=neutral, PublicKeyToken=null",
+        "Symbols": [
+          "{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "NotApplicable",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "18",
+      "ParentId": "20",
+      "Name": "IGenericDao<Product, long>",
+      "Stereotype": "Interface",
+      "CreatedAtUtc": "2025-05-07T18:02:33.1539498Z",
+      "AbsoluteTopLeft": "356.9449,-477.156",
+      "HeaderContentSize": "239.7067,50",
+      "PreferredHeaderSize": "159.98,39.4",
+      "Tooltip": "interface Es.Udc.DotNet.ModelUtil.Dao.IGenericDao<Model.Product, long>\r\nassembly: ModelUtil, Version=2.0.2.1, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "239.7067,212",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "237.7067,161",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "IGenericDao",
+        "FullName": "interface Es.Udc.DotNet.ModelUtil.Dao.IGenericDao<Model.Product, long>",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "32",
+      "ParentId": "18",
+      "Name": "void Attach(Product entityAlreadyInDb)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:14.6589734Z",
+      "AbsoluteTopLeft": "357.9449,-427.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "237.7067,23",
+      "Tooltip": "void Attach(Product entityAlreadyInDb)",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Attach",
+        "FullName": "void Attach(Product entityAlreadyInDb)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Attach(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "33",
+      "ParentId": "18",
+      "Name": "bool Exists(long id)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:15.5575653Z",
+      "AbsoluteTopLeft": "357.9449,-404.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "130.3367,23",
+      "Tooltip": "bool Exists(long id)",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Exists",
+        "FullName": "bool Exists(long id)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Exists(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "34",
+      "ParentId": "18",
+      "Name": "void Create(Product entity)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:16.3324841Z",
+      "AbsoluteTopLeft": "357.9449,-381.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "172.1967,23",
+      "Tooltip": "void Create(Product entity)",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Create",
+        "FullName": "void Create(Product entity)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Create(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "35",
+      "ParentId": "18",
+      "Name": "Product Find(long id)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:17.1729620Z",
+      "AbsoluteTopLeft": "357.9449,-358.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "141.5933,23",
+      "Tooltip": "Product Find(long id)",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Find",
+        "FullName": "Product Find(long id)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Find(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "36",
+      "ParentId": "18",
+      "Name": "List<Product> GetAllElements()",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:17.7415257Z",
+      "AbsoluteTopLeft": "357.9449,-335.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "196,23",
+      "Tooltip": "List<Product> GetAllElements()",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "GetAllElements",
+        "FullName": "List<Product> GetAllElements()",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"GetAllElements()\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "37",
+      "ParentId": "18",
+      "Name": "void Remove(long id)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:18.4238979Z",
+      "AbsoluteTopLeft": "357.9449,-312.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "142.8233,23",
+      "Tooltip": "void Remove(long id)",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Remove",
+        "FullName": "void Remove(long id)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Remove(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "38",
+      "ParentId": "18",
+      "Name": "void Update(Product entity)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:19.0865084Z",
+      "AbsoluteTopLeft": "357.9449,-289.156",
+      "HeaderContentSize": "237.7067,23",
+      "PreferredHeaderSize": "176.68,23",
+      "Tooltip": "void Update(Product entity)",
+      "NodeTotalSize": "237.7067,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Update",
+        "FullName": "void Update(Product entity)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Update(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "31",
+      "ParentId": "20",
+      "Name": "GenericDaoEntityFramework<Product, long>",
+      "Stereotype": "Class",
+      "CreatedAtUtc": "2025-05-07T18:03:07.8608293Z",
+      "AbsoluteTopLeft": "353.8507,-185.156",
+      "HeaderContentSize": "248.54,50",
+      "PreferredHeaderSize": "248.54,39.4",
+      "Tooltip": "class Es.Udc.DotNet.ModelUtil.Dao.GenericDaoEntityFramework<Model.Product, long>\r\nassembly: ModelUtil, Version=2.0.2.1, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "248.54,235",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "246.54,184",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "GenericDaoEntityFramework",
+        "FullName": "class Es.Udc.DotNet.ModelUtil.Dao.GenericDaoEntityFramework<Model.Product, long>",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "39",
+      "ParentId": "31",
+      "Name": "DbContext Context",
+      "Stereotype": "Property",
+      "CreatedAtUtc": "2025-05-07T18:03:20.9445870Z",
+      "AbsoluteTopLeft": "354.8507,-135.156",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "131.0867,23",
+      "Tooltip": "public DbContext Context { get; set; }",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Context",
+        "FullName": "public DbContext Context { get; set; }",
+        "Symbols": [
+          "{\"K\":\"Property\",\"N\":\"Context\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "40",
+      "ParentId": "31",
+      "Name": "void Attach(Product entityAlreadyInDb)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:21.8460504Z",
+      "AbsoluteTopLeft": "354.8507,-112.156",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "237.7067,23",
+      "Tooltip": "public void Attach(Product entityAlreadyInDb)",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Attach",
+        "FullName": "public void Attach(Product entityAlreadyInDb)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Attach(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "41",
+      "ParentId": "31",
+      "Name": "void Create(Product entity)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:22.7737961Z",
+      "AbsoluteTopLeft": "354.8507,-89.156",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "172.1967,23",
+      "Tooltip": "public void Create(Product entity)",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Create",
+        "FullName": "public void Create(Product entity)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Create(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "42",
+      "ParentId": "31",
+      "Name": "bool Exists(long id)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:23.4570350Z",
+      "AbsoluteTopLeft": "354.8507,-66.156",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "130.3367,23",
+      "Tooltip": "public bool Exists(long id)",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Exists",
+        "FullName": "public bool Exists(long id)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Exists(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "43",
+      "ParentId": "31",
+      "Name": "Product Find(long id)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:24.2230525Z",
+      "AbsoluteTopLeft": "354.8507,-43.156",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "141.5933,23",
+      "Tooltip": "public Product Find(long id)",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Find",
+        "FullName": "public Product Find(long id)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Find(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "44",
+      "ParentId": "31",
+      "Name": "List<Product> GetAllElements()",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:24.8878030Z",
+      "AbsoluteTopLeft": "354.8507,-20.156",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "196,23",
+      "Tooltip": "public List<Product> GetAllElements()",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "GetAllElements",
+        "FullName": "public List<Product> GetAllElements()",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"GetAllElements()\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "45",
+      "ParentId": "31",
+      "Name": "void Remove(long id)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:25.6161351Z",
+      "AbsoluteTopLeft": "354.8507,2.844",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "142.8233,23",
+      "Tooltip": "public void Remove(long id)",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Remove",
+        "FullName": "public void Remove(long id)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Remove(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    },
+    {
+      "Id": "46",
+      "ParentId": "31",
+      "Name": "void Update(Product entity)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-07T18:03:26.4901843Z",
+      "AbsoluteTopLeft": "354.8507,25.844",
+      "HeaderContentSize": "246.54,23",
+      "PreferredHeaderSize": "176.68,23",
+      "Tooltip": "public void Update(Product entity)",
+      "NodeTotalSize": "246.54,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "Update",
+        "FullName": "public void Update(Product entity)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"Update(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "Metadata"
+      }
+    }
+  ],
+  "Connectors": [
+    {
+      "Id": "4",
+      "SourceNodeId": "17",
+      "TargetNodeId": "16",
+      "Stereotype": "Implementation",
+      "Payload": {
+        "Discriminator": "Other",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Implementation|{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+      }
+    },
+    {
+      "Id": "5",
+      "SourceNodeId": "16",
+      "TargetNodeId": "18",
+      "Stereotype": "Inheritance",
+      "Payload": {
+        "Discriminator": "Other",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Inheritance|{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}"
+      }
+    },
+    {
+      "Id": "7",
+      "SourceNodeId": "17",
+      "TargetNodeId": "31",
+      "Stereotype": "Inheritance",
+      "Payload": {
+        "Discriminator": "Other",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"ProductDaoImpl\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Inheritance|{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}"
+      }
+    },
+    {
+      "Id": "8",
+      "SourceNodeId": "31",
+      "TargetNodeId": "18",
+      "Stereotype": "Implementation",
+      "Payload": {
+        "Discriminator": "Other",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"GenericDaoEntityFramework\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}|Implementation|{\"K\":\"NamedType\",\"N\":\"IGenericDao\",\"A\":2,\"T\":[{\"K\":\"NamedType\",\"N\":\"Product\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}},{\"K\":\"NamedType\",\"N\":\"Int64\",\"C\":{\"K\":\"Namespace\",\"N\":\"System\",\"C\":{\"K\":\"Assembly\",\"N\":\"mscorlib\",\"V\":\"4.0.0.0\"}}}],\"C\":{\"K\":\"Namespace\",\"N\":\"Dao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ModelUtil\",\"C\":{\"K\":\"Namespace\",\"N\":\"DotNet\",\"C\":{\"K\":\"Namespace\",\"N\":\"Udc\",\"C\":{\"K\":\"Namespace\",\"N\":\"Es\",\"C\":{\"K\":\"Assembly\",\"N\":\"ModelUtil\",\"V\":\"2.0.2.1\"}}}}}}}"
+      }
+    }
+  ]
+}

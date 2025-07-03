@@ -1,0 +1,35 @@
+@startuml Diagrama de Clases para UserService
+' DTO
+class UserDto {
+}
+
+class UserSummaryDto {
+}
+
+interface IUserService {
+    -userDao: IUserDao
+    --
+    +ChangePassword(userProfileId: long, oldClearPassword: string, newClearPassword: string): void
+    +FindUserProfileDetails(userProfileId: long): UserSummaryDto   
+    +Login(loginName: string, password: string, passwordIsEncrypted: boolean): UserDto
+    +RegisterUser(loginName: string, clearPassword: string, userSummaryDto: UserSummaryDto): long
+    +UpdateUserProfileDetails(userProfileId: long, userSummaryDto: UserSummaryDto): void   
+    +UserExists(loginName: string): bool
+}
+
+class UserService {
+}
+
+class PasswordEncypter {
+}
+
+class IncorrectPasswordException {
+}
+
+UserService ..|> IUserService
+UserService ..> UserDto : usa
+UserService ..> UserSummaryDto : usa
+UserService ..> PasswordEncypter : usa
+UserService ..> IncorrectPasswordException : lanza
+IUserService ..> UserDto
+IUserService ..> UserSummaryDto

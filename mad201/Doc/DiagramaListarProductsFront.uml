@@ -1,0 +1,46 @@
+@startuml
+actor UsuarioWeb
+participant "MainPage.aspx" as MainPage
+participant "RestaurantProducts.aspx" as RestaurantProducts
+participant "RestaurantProducts.aspx.cs" as CodeBehind
+participant "SessionManager" as SessionMgr
+participant "IRestaurantService" as RestaurantService
+
+UsuarioWeb -> MainPage : Selecciona restaurante
+MainPage -> RestaurantProducts : Redirige a RestaurantProducts.aspx?id={id}
+
+activate RestaurantProducts
+RestaurantProducts -> CodeBehind : Page_Load()
+activate CodeBehind
+
+CodeBehind -> CodeBehind : RestaurantId.HasValue
+alt Si hay RestaurantId
+    CodeBehind -> CodeBehind : ConfigureViewByRole()
+    CodeBehind -> CodeBehind : LoadCategories()
+
+    CodeBehind -> SessionMgr : GetAllCategories()
+    SessionMgr -> RestaurantService : FindAllCategories()
+    RestaurantService --> SessionMgr : List<Category>
+    SessionMgr --> CodeBehind : List<Category>
+
+    CodeBehind -> CodeBehind : LoadProducts(id, page, pageSize, category, keywords)
+
+    alt Con filtros (category o keywords)
+        CodeBehind -> SessionMgr : GetRestaurantProductsFilterByCategoryAndKeywords(id, category, keywords, page, pageSize)
+        SessionMgr -> RestaurantService : listRestaurantProductsFilterByCategoryAndKeywords(id, category, keywords, page, pageSize)
+        RestaurantService --> SessionMgr : PagedResult<Product>
+        SessionMgr --> CodeBehind : PagedResult<Product>
+    else Sin filtros
+        CodeBehind -> SessionMgr : GetAllRestaurantProducts(id, page, pageSize)
+        SessionMgr -> RestaurantService : listRestaurantProducts(id, page, pagesize)
+        RestaurantService --> SessionMgr : PagedResult<Product>
+        SessionMgr --> CodeBehind : PagedResult<Product>
+    end
+
+    CodeBehind --> RestaurantProducts : Muestra productos
+    RestaurantProducts --> UsuarioWeb : Muestra la página
+end
+
+deactivate CodeBehind
+deactivate RestaurantProducts
+@enduml

@@ -1,0 +1,19 @@
+@startuml Diagrama de Clases para CommentService
+' DTO
+class CommentDto {}
+
+interface ICommentService {
+    -CommentDao: ICommentDao
+    --
+    +AddComment(content: string, rate: int, clientId: long, restaurantId: long): long
+    +DeleteComment(commentId: long): void
+    +FindByRestaurantId(restaurantId: long, pageNumber: int, pageSize: itnt): List<CommentDto>
+}
+
+class CommentService {
+}
+
+CommentService ..|> ICommentService
+CommentService ..> CommentDto : usa
+
+ICommentService ..> CommentDto

@@ -1,0 +1,858 @@
+﻿{
+  "Version": 2,
+  "Properties": {
+    "AreNodeDescriptionsVisible": "True"
+  },
+  "Nodes": [
+    {
+      "Id": "1",
+      "Name": "Model.Services.ProductService",
+      "Stereotype": "Namespace",
+      "CreatedAtUtc": "2025-05-13T09:14:25.9258447Z",
+      "AbsoluteTopLeft": "43.1729,-315.6286",
+      "HeaderContentSize": "344.8667,27",
+      "PreferredHeaderSize": "256.3333,27",
+      "Tooltip": "namespace Model.Services.ProductService\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "344.8667,618",
+      "ChildrenAreaTopLeft": "1,27",
+      "ChildrenAreaSize": "342.8667,590",
+      "Payload": {
+        "Discriminator": "RoslynNamespace",
+        "SymbolName": "ProductService",
+        "FullyQualifiedName": "Model.Services.ProductService",
+        "FullName": "namespace Model.Services.ProductService",
+        "Symbols": [
+          "{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode",
+        "NamespaceLevel": 3
+      }
+    },
+    {
+      "Id": "2",
+      "ParentId": "1",
+      "Name": "IProductService",
+      "Stereotype": "Interface",
+      "CreatedAtUtc": "2025-05-13T09:14:26.0519665Z",
+      "AbsoluteTopLeft": "64.1729,-268.6286",
+      "HeaderContentSize": "302.8667,50",
+      "PreferredHeaderSize": "97.88,39.4",
+      "Tooltip": "interface Model.Services.ProductService.IProductService\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "302.8667,212",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "300.8667,161",
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "IProductService",
+        "FullName": "interface Model.Services.ProductService.IProductService",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "4",
+      "ParentId": "2",
+      "Name": "IProductDao ProductDao",
+      "Stereotype": "Property",
+      "CreatedAtUtc": "2025-05-13T09:14:31.1627845Z",
+      "AbsoluteTopLeft": "65.1729,-218.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "162.36,23",
+      "Tooltip": "IProductDao ProductDao { set; }",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "ProductDao",
+        "FullName": "IProductDao ProductDao { set; }",
+        "Symbols": [
+          "{\"K\":\"Property\",\"N\":\"ProductDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "5",
+      "ParentId": "2",
+      "Name": "IPropertyDao PropertyDao",
+      "Stereotype": "Property",
+      "CreatedAtUtc": "2025-05-13T09:14:32.8633878Z",
+      "AbsoluteTopLeft": "65.1729,-195.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "170.18,23",
+      "Tooltip": "IPropertyDao PropertyDao { set; }",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "PropertyDao",
+        "FullName": "IPropertyDao PropertyDao { set; }",
+        "Symbols": [
+          "{\"K\":\"Property\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "6",
+      "ParentId": "2",
+      "Name": "List<ProductDto> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:33.6683804Z",
+      "AbsoluteTopLeft": "65.1729,-172.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "298.0167,23",
+      "Tooltip": "List<ProductDto> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductCategory",
+        "FullName": "List<ProductDto> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductCategory(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "7",
+      "ParentId": "2",
+      "Name": "ProductDto FindByProductName(string productName)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:34.9652277Z",
+      "AbsoluteTopLeft": "65.1729,-149.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "299.08,23",
+      "Tooltip": "ProductDto FindByProductName(string productName)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductName",
+        "FullName": "ProductDto FindByProductName(string productName)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductName(string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "8",
+      "ParentId": "2",
+      "Name": "List<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:36.1576172Z",
+      "AbsoluteTopLeft": "65.1729,-126.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "300,23",
+      "Tooltip": "List<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindPropertiesByProductId",
+        "FullName": "List<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindPropertiesByProductId(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "9",
+      "ParentId": "2",
+      "Name": "List<ProductDto> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:36.9212398Z",
+      "AbsoluteTopLeft": "65.1729,-103.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "300.8667,23",
+      "Tooltip": "List<ProductDto> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "SearchFilters",
+        "FullName": "List<ProductDto> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"SearchFilters(long, int, int, long, string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "10",
+      "ParentId": "2",
+      "Name": "List<Property> ViewAllProperties()",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:37.9633890Z",
+      "AbsoluteTopLeft": "65.1729,-80.6286",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "212.5967,23",
+      "Tooltip": "List<Property> ViewAllProperties()",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "ViewAllProperties",
+        "FullName": "List<Property> ViewAllProperties()",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"ViewAllProperties()\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "3",
+      "ParentId": "1",
+      "Name": "ProductService",
+      "Stereotype": "Class",
+      "CreatedAtUtc": "2025-05-13T09:14:26.1007265Z",
+      "AbsoluteTopLeft": "64.1729,23.3714",
+      "HeaderContentSize": "302.8667,50",
+      "PreferredHeaderSize": "96.2,39.4",
+      "Tooltip": "class Model.Services.ProductService.ProductService\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "302.8667,258",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "300.8667,207",
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "ProductService",
+        "FullName": "class Model.Services.ProductService.ProductService",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "28",
+      "ParentId": "3",
+      "Name": "IProductDao ProductDao",
+      "Stereotype": "Property",
+      "CreatedAtUtc": "2025-05-13T09:15:37.4225622Z",
+      "AbsoluteTopLeft": "65.1729,73.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "162.36,23",
+      "Tooltip": "public IProductDao ProductDao { private get; set; }",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "ProductDao",
+        "FullName": "public IProductDao ProductDao { private get; set; }",
+        "Symbols": [
+          "{\"K\":\"Property\",\"N\":\"ProductDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "29",
+      "ParentId": "3",
+      "Name": "IPropertyDao PropertyDao",
+      "Stereotype": "Property",
+      "CreatedAtUtc": "2025-05-13T09:15:40.0304757Z",
+      "AbsoluteTopLeft": "65.1729,96.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "170.18,23",
+      "Tooltip": "public IPropertyDao PropertyDao { private get; set; }",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "PropertyDao",
+        "FullName": "public IPropertyDao PropertyDao { private get; set; }",
+        "Symbols": [
+          "{\"K\":\"Property\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "30",
+      "ParentId": "3",
+      "Name": "List<ProductDto> ConvertToProductDto(List<Product> products)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:41.0193924Z",
+      "AbsoluteTopLeft": "65.1729,119.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "299.1467,23",
+      "Tooltip": "private List<ProductDto> ConvertToProductDto(List<Product> products)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "ConvertToProductDto",
+        "FullName": "private List<ProductDto> ConvertToProductDto(List<Product> products)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"ConvertToProductDto(System.Collections.Generic.List<Model.Product>)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Private",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "31",
+      "ParentId": "3",
+      "Name": "List<ProductDto> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:42.0441677Z",
+      "AbsoluteTopLeft": "65.1729,142.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "298.0167,23",
+      "Tooltip": "public List<ProductDto> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductCategory",
+        "FullName": "public List<ProductDto> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductCategory(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "32",
+      "ParentId": "3",
+      "Name": "ProductDto FindByProductName(string productName)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:42.9095134Z",
+      "AbsoluteTopLeft": "65.1729,165.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "299.08,23",
+      "Tooltip": "public ProductDto FindByProductName(string productName)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductName",
+        "FullName": "public ProductDto FindByProductName(string productName)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductName(string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "33",
+      "ParentId": "3",
+      "Name": "List<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:43.7198423Z",
+      "AbsoluteTopLeft": "65.1729,188.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "300,23",
+      "Tooltip": "public List<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindPropertiesByProductId",
+        "FullName": "public List<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindPropertiesByProductId(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "34",
+      "ParentId": "3",
+      "Name": "ProductDto FromProduct(Product product)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:44.4029908Z",
+      "AbsoluteTopLeft": "65.1729,211.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "256.6167,23",
+      "Tooltip": "private ProductDto FromProduct(Product product)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FromProduct",
+        "FullName": "private ProductDto FromProduct(Product product)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FromProduct(Model.Product)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Private",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "35",
+      "ParentId": "3",
+      "Name": "List<ProductDto> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:45.0972312Z",
+      "AbsoluteTopLeft": "65.1729,234.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "300.8667,23",
+      "Tooltip": "public List<ProductDto> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "SearchFilters",
+        "FullName": "public List<ProductDto> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"SearchFilters(long, int, int, long, string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "36",
+      "ParentId": "3",
+      "Name": "List<Property> ViewAllProperties()",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:15:46.0075610Z",
+      "AbsoluteTopLeft": "65.1729,257.3714",
+      "HeaderContentSize": "300.8667,23",
+      "PreferredHeaderSize": "212.5967,23",
+      "Tooltip": "public List<Property> ViewAllProperties()",
+      "NodeTotalSize": "300.8667,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "ViewAllProperties",
+        "FullName": "public List<Property> ViewAllProperties()",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"ViewAllProperties()\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "26",
+      "Name": "Model.Daos",
+      "Stereotype": "Namespace",
+      "CreatedAtUtc": "2025-05-13T09:15:19.8705436Z",
+      "AbsoluteTopLeft": "478.0395,-242.6832",
+      "HeaderContentSize": "343.0571,27",
+      "PreferredHeaderSize": "159.3,27",
+      "Tooltip": "namespace Model.Daos\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "343.0571,457.4017",
+      "ChildrenAreaTopLeft": "1,27",
+      "ChildrenAreaSize": "341.0571,429.4017",
+      "Payload": {
+        "Discriminator": "RoslynNamespace",
+        "SymbolName": "Daos",
+        "FullyQualifiedName": "Model.Daos",
+        "FullName": "namespace Model.Daos",
+        "Symbols": [
+          "{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode",
+        "NamespaceLevel": 2
+      }
+    },
+    {
+      "Id": "11",
+      "ParentId": "26",
+      "Name": "IProductDao",
+      "Stereotype": "Interface",
+      "CreatedAtUtc": "2025-05-13T09:14:40.2863194Z",
+      "AbsoluteTopLeft": "499.0395,4.7185",
+      "HeaderContentSize": "301.0567,50",
+      "PreferredHeaderSize": "81.4533,39.4",
+      "Tooltip": "interface Model.Daos.ProductDao.IProductDao\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "301.0567,189",
+      "ChildrenAreaTopLeft": "1,50",
+      "ChildrenAreaSize": "299.0567,138",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "IProductDao",
+        "FullName": "interface Model.Daos.ProductDao.IProductDao",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "16",
+      "ParentId": "11",
+      "Name": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:48.3321000Z",
+      "AbsoluteTopLeft": "500.0395,54.7185",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "295.86,23",
+      "Tooltip": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductCategory",
+        "FullName": "PagedResult<Product> FindByProductCategory(long categoryId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductCategory(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "17",
+      "ParentId": "11",
+      "Name": "Product FindByProductName(string productName)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:48.8482455Z",
+      "AbsoluteTopLeft": "500.0395,77.7185",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "297.1167,23",
+      "Tooltip": "Product FindByProductName(string productName)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByProductName",
+        "FullName": "Product FindByProductName(string productName)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByProductName(string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "Description": "Finds a product by its name",
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "18",
+      "ParentId": "11",
+      "Name": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:49.7692419Z",
+      "AbsoluteTopLeft": "500.0395,100.7185",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "297.4333,23",
+      "Tooltip": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByRestaurant",
+        "FullName": "PagedResult<Product> FindByRestaurant(long restaurantId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByRestaurant(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "19",
+      "ParentId": "11",
+      "Name": "PagedResult<Product> FindByRestaurantAndCategory(long restaurantId, long categoryId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:50.9226357Z",
+      "AbsoluteTopLeft": "500.0395,123.7185",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "295.4833,23",
+      "Tooltip": "PagedResult<Product> FindByRestaurantAndCategory(long restaurantId, long categoryId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByRestaurantAndCategory",
+        "FullName": "PagedResult<Product> FindByRestaurantAndCategory(long restaurantId, long categoryId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByRestaurantAndCategory(long, long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "20",
+      "ParentId": "11",
+      "Name": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:51.6845853Z",
+      "AbsoluteTopLeft": "500.0395,146.7185",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "299.0567,23",
+      "Tooltip": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindPropertiesByProductId",
+        "FullName": "PagedResult<Property> FindPropertiesByProductId(long productId, int pageNumber, int pageSize)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindPropertiesByProductId(long, int, int)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "21",
+      "ParentId": "11",
+      "Name": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:52.7599279Z",
+      "AbsoluteTopLeft": "500.0395,169.7185",
+      "HeaderContentSize": "299.0567,23",
+      "PreferredHeaderSize": "298.6033,23",
+      "Tooltip": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+      "NodeTotalSize": "299.0567,23",
+      "IsPinned": true,
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "SearchFilters",
+        "FullName": "PagedResult<Product> SearchFilters(long restaurantId, int pageNumber, int pageSize, long categoryId, string name)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"SearchFilters(long, int, int, long, string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "12",
+      "ParentId": "26",
+      "Name": "IPropertyDao",
+      "Stereotype": "Interface",
+      "CreatedAtUtc": "2025-05-13T09:14:41.5585453Z",
+      "AbsoluteTopLeft": "499.04,-195.6832",
+      "HeaderContentSize": "301,100.4",
+      "PreferredHeaderSize": "301,100.4",
+      "Tooltip": "interface Model.Daos.PropertyDao.IPropertyDao\r\nassembly: Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NodeTotalSize": "301,170.4",
+      "ChildrenAreaTopLeft": "1,100.4",
+      "ChildrenAreaSize": "299,69",
+      "Payload": {
+        "Discriminator": "RoslynType",
+        "SymbolName": "IPropertyDao",
+        "FullName": "interface Model.Daos.PropertyDao.IPropertyDao",
+        "Symbols": [
+          "{\"K\":\"NamedType\",\"N\":\"IPropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+        ],
+        "Description": "Interfaz para la gestión de propiedades en la base de datos. Extiende la funcionalidad de Es.Udc.DotNet.ModelUtil.Dao.IGenericDao`2 para la entidad Model.Property .",
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "13",
+      "ParentId": "12",
+      "Name": "Property FindByName(string name)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:45.0094852Z",
+      "AbsoluteTopLeft": "500.04,-95.2832",
+      "HeaderContentSize": "299,23",
+      "PreferredHeaderSize": "215.7267,23",
+      "Tooltip": "Property FindByName(string name)",
+      "NodeTotalSize": "299,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindByName",
+        "FullName": "Property FindByName(string name)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindByName(string)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IPropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "Description": "Busca una propiedad en la base de datos por su nombre.",
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "14",
+      "ParentId": "12",
+      "Name": "List<Property> FindDistinctProperties()",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:45.6279376Z",
+      "AbsoluteTopLeft": "500.04,-72.2832",
+      "HeaderContentSize": "299,23",
+      "PreferredHeaderSize": "236.1433,23",
+      "Tooltip": "List<Property> FindDistinctProperties()",
+      "NodeTotalSize": "299,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindDistinctProperties",
+        "FullName": "List<Property> FindDistinctProperties()",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindDistinctProperties()\",\"C\":{\"K\":\"NamedType\",\"N\":\"IPropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "Description": "Busca todas las propiedades especificas diferentes",
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    },
+    {
+      "Id": "15",
+      "ParentId": "12",
+      "Name": "List<Property> FindProductProperties(long productId)",
+      "Stereotype": "Method",
+      "CreatedAtUtc": "2025-05-13T09:14:46.1453081Z",
+      "AbsoluteTopLeft": "500.04,-49.2832",
+      "HeaderContentSize": "299,23",
+      "PreferredHeaderSize": "295.3233,23",
+      "Tooltip": "List<Property> FindProductProperties(long productId)",
+      "NodeTotalSize": "299,23",
+      "Payload": {
+        "Discriminator": "Other",
+        "SymbolName": "FindProductProperties",
+        "FullName": "List<Property> FindProductProperties(long productId)",
+        "Symbols": [
+          "{\"K\":\"Method\",\"S\":\"FindProductProperties(long)\",\"C\":{\"K\":\"NamedType\",\"N\":\"IPropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+        ],
+        "Description": "Busca todas las propiedades especificas de un producto",
+        "IsDescriptionVisible": true,
+        "IsAbstract": true,
+        "Accessibility": "Public",
+        "Origin": "SourceCode"
+      }
+    }
+  ],
+  "Connectors": [
+    {
+      "Id": "1",
+      "SourceNodeId": "3",
+      "TargetNodeId": "2",
+      "Stereotype": "Implementation",
+      "Payload": {
+        "Discriminator": "Other",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Implementation|{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}"
+      }
+    },
+    {
+      "Id": "2",
+      "SourceNodeId": "2",
+      "TargetNodeId": "11",
+      "Stereotype": "Association",
+      "Payload": {
+        "Discriminator": "Association",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Association|{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}",
+        "TargetLabels": [
+          {
+            "Label": {
+              "Text2": "ProductDao",
+              "Tooltip": "IProductDao ProductDao { set; }",
+              "CanBeHidden": true
+            },
+            "Symbol": "{\"K\":\"Property\",\"N\":\"ProductDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+          }
+        ]
+      }
+    },
+    {
+      "Id": "3",
+      "SourceNodeId": "3",
+      "TargetNodeId": "11",
+      "Stereotype": "Association",
+      "Payload": {
+        "Discriminator": "Association",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Association|{\"K\":\"NamedType\",\"N\":\"IProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}",
+        "TargetLabels": [
+          {
+            "Label": {
+              "Text2": "ProductDao",
+              "Tooltip": "public IProductDao ProductDao { private get; set; }",
+              "CanBeHidden": true
+            },
+            "Symbol": "{\"K\":\"Property\",\"N\":\"ProductDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+          }
+        ]
+      }
+    },
+    {
+      "Id": "4",
+      "SourceNodeId": "2",
+      "TargetNodeId": "12",
+      "Stereotype": "Association",
+      "Payload": {
+        "Discriminator": "Association",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Association|{\"K\":\"NamedType\",\"N\":\"IPropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}",
+        "TargetLabels": [
+          {
+            "Label": {
+              "Text2": "PropertyDao",
+              "Tooltip": "IPropertyDao PropertyDao { set; }",
+              "CanBeHidden": true
+            },
+            "Symbol": "{\"K\":\"Property\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"IProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+          }
+        ]
+      }
+    },
+    {
+      "Id": "5",
+      "SourceNodeId": "3",
+      "TargetNodeId": "12",
+      "Stereotype": "Association",
+      "Payload": {
+        "Discriminator": "Association",
+        "Relationship": "{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}|Association|{\"K\":\"NamedType\",\"N\":\"IPropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"Namespace\",\"N\":\"Daos\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}",
+        "TargetLabels": [
+          {
+            "Label": {
+              "Text2": "PropertyDao",
+              "Tooltip": "public IPropertyDao PropertyDao { private get; set; }",
+              "CanBeHidden": true
+            },
+            "Symbol": "{\"K\":\"Property\",\"N\":\"PropertyDao\",\"C\":{\"K\":\"NamedType\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"ProductService\",\"C\":{\"K\":\"Namespace\",\"N\":\"Services\",\"C\":{\"K\":\"Namespace\",\"N\":\"Model\",\"C\":{\"K\":\"Assembly\",\"N\":\"Model\",\"V\":\"1.0.0.0\"}}}}}}"
+          }
+        ]
+      }
+    }
+  ]
+}

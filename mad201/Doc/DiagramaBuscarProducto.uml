@@ -1,0 +1,22 @@
+@startuml
+
+participant "Usuario" as Usuario
+participant "IProductService" as UI
+participant "ProductService" as ProductService
+participant "IProductDao" as ProductDao
+participant "ProductDao" as ProductDto
+database "Database" as Product
+
+Usuario -> UI : Buscar producto (nombre)
+UI -> ProductService : FindByProductName(nombre)
+ProductService -> ProductDao : FindByProductName(nombre)
+ProductDao -> ProductDto : FindByProductName(nombre)
+ProductDto -> Product : DbSet<Product>
+Product --> ProductDto : Product
+ProductDto --> ProductDao : Product
+ProductDao --> ProductService : Product
+ProductService -> ProductService : FromProduct(Product)
+ProductService --> UI : ProductDto
+UI --> Usuario : Mostrar producto
+
+@enduml

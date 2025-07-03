@@ -1,0 +1,27 @@
+@startuml
+
+actor Usuario
+participant "IRestaurantService" as IProductService
+participant "RestaurantService" as ProductService
+participant "IProductDao" as IProductDao
+participant "ProductDaoImpl" as ProductDao
+database "Base de Datos" as DB
+
+== Petición desde la capa superior ==
+Usuario -> IProductService : listRestaurantProducts(restaurantId, pageNumber, pageSize)
+IProductService -> ProductService : listRestaurantProducts(restaurantId, pageNumber, pageSize)
+
+== Llamada al DAO ==
+ProductService -> IProductDao : FindByRestaurant(restaurantId, pageNumber, pageSize)
+IProductDao -> ProductDao : FindByRestaurant(restaurantId, pageNumber, pageSize)
+ProductDao -> DB : Consulta LINQ sobre Product con filtro por restaurante
+DB --> ProductDao : Resultado
+ProductDao -> ProductDao : Resultado = result.ToPagedList
+ProductDao --> IProductDao : Resultado
+IProductDao --> ProductService : Resultado
+
+== Respuesta al usuario ==
+ProductService --> IProductService : Resultado
+IProductService --> Usuario : Mostrar lista de productos
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml Diagrama de Clases para CartlineService
+' DTO
+class CartLineDto {
+}
+
+' Interfaz del servicio
+interface ICartService {
+    -ProductDao: IProductDao
+    -OrderDao: IOrderDao
+    -CartDao: ICartDao
+    -ClientDao: IClientDao
+    -BankCardDao: IBankCardDao
+    +AddOrder(clientId: long, address: string, bankcard: long, cartLines: List<CartLineDto>): long
+    +ViewClientOrders(clientId: long, pageNumber: int, pageSize: int): PagedResult<Order>
+}
+
+' Implementación del servicio
+class CartService {
+}
+
+CartService ..|> ICartService
+CartService ..> CartLineDto : usa
+
+ICartService ..> CartLineDto
+
+
+@enduml
