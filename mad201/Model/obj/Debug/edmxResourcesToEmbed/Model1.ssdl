@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="CategorySet" EntityType="Model1.Store.CategorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CartlineSet" EntityType="Model1.Store.CartlineSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet" EntityType="Model1.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BankcardSet" EntityType="Model1.Store.BankcardSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderSet" EntityType="Model1.Store.OrderSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductSet" EntityType="Model1.Store.ProductSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PropertySet" EntityType="Model1.Store.PropertySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommentSet" EntityType="Model1.Store.CommentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductPropertySet" EntityType="Model1.Store.ProductPropertySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet_Client" EntityType="Model1.Store.UserSet_Client" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet_Restaurant" EntityType="Model1.Store.UserSet_Restaurant" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ProductCategory" Association="Model1.Store.ProductCategory">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="Category" EntitySet="CategorySet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderCartline" Association="Model1.Store.OrderCartline">
+      <End Role="Order" EntitySet="OrderSet" />
+      <End Role="Cartline" EntitySet="CartlineSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientBankcard" Association="Model1.Store.ClientBankcard">
+      <End Role="Client" EntitySet="UserSet_Client" />
+      <End Role="Bankcard" EntitySet="BankcardSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientOrder" Association="Model1.Store.ClientOrder">
+      <End Role="Client" EntitySet="UserSet_Client" />
+      <End Role="Order" EntitySet="OrderSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductRestaurant" Association="Model1.Store.ProductRestaurant">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="Restaurant" EntitySet="UserSet_Restaurant" />
+    </AssociationSet>
+    <AssociationSet Name="RestaurantComment" Association="Model1.Store.RestaurantComment">
+      <End Role="Restaurant" EntitySet="UserSet_Restaurant" />
+      <End Role="Comment" EntitySet="CommentSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientComment" Association="Model1.Store.ClientComment">
+      <End Role="Client" EntitySet="UserSet_Client" />
+      <End Role="Comment" EntitySet="CommentSet" />
+    </AssociationSet>
+    <AssociationSet Name="Parent" Association="Model1.Store.CategoryCategory">
+      <End Role="Category" EntitySet="CategorySet" />
+      <End Role="ParentCategory" EntitySet="CategorySet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductProductPorperty" Association="Model1.Store.ProductProductPorperty">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="ProductPorperty" EntitySet="ProductPropertySet" />
+    </AssociationSet>
+    <AssociationSet Name="PropertyProductPorperty" Association="Model1.Store.PropertyProductPorperty">
+      <End Role="Property" EntitySet="PropertySet" />
+      <End Role="ProductPorperty" EntitySet="ProductPropertySet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_inherits_User" Association="Model1.Store.FK_Client_inherits_User">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Client" EntitySet="UserSet_Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Restaurant_inherits_User" Association="Model1.Store.FK_Restaurant_inherits_User">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Restaurant" EntitySet="UserSet_Restaurant" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CategorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Category2_Id" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CartlineSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uds" Type="int" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="productName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="language" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankcardSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="number" Type="bigint" Nullable="false" />
+    <Property Name="cardtype" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cvv" Type="int" Nullable="false" />
+    <Property Name="expirationdate" Type="datetime" Nullable="false" />
+    <Property Name="default" Type="bit" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Client_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orderDate" Type="datetime" Nullable="false" />
+    <Property Name="orderAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="bankcardNumber" Type="bigint" Nullable="false" />
+    <Property Name="Client_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="creationDate" Type="datetime" Nullable="false" />
+    <Property Name="stock" Type="int" Nullable="false" />
+    <Property Name="Category_Id" Type="bigint" Nullable="false" />
+    <Property Name="Restaurant_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PropertySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="rate" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="Restaurant_Id" Type="bigint" Nullable="false" />
+    <Property Name="Client_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductPropertySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Product_Id" Type="bigint" Nullable="false" />
+    <Property Name="Property_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet_Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet_Restaurant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="schedule" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="ProductCategory">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <End Role="Category" Type="Model1.Store.CategorySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderCartline">
+    <End Role="Order" Type="Model1.Store.OrderSet" Multiplicity="1" />
+    <End Role="Cartline" Type="Model1.Store.CartlineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cartline">
+        <PropertyRef Name="Order_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientBankcard">
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="1" />
+    <End Role="Bankcard" Type="Model1.Store.BankcardSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bankcard">
+        <PropertyRef Name="Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientOrder">
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="1" />
+    <End Role="Order" Type="Model1.Store.OrderSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductRestaurant">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <End Role="Restaurant" Type="Model1.Store.UserSet_Restaurant" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Restaurant_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RestaurantComment">
+    <End Role="Restaurant" Type="Model1.Store.UserSet_Restaurant" Multiplicity="1" />
+    <End Role="Comment" Type="Model1.Store.CommentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="Restaurant_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientComment">
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="1" />
+    <End Role="Comment" Type="Model1.Store.CommentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoryCategory">
+    <End Role="Category" Type="Model1.Store.CategorySet" Multiplicity="0..1" />
+    <End Role="ParentCategory" Type="Model1.Store.CategorySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ParentCategory">
+        <PropertyRef Name="Category2_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductProductPorperty">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="1" />
+    <End Role="ProductPorperty" Type="Model1.Store.ProductPropertySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPorperty">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PropertyProductPorperty">
+    <End Role="Property" Type="Model1.Store.PropertySet" Multiplicity="1" />
+    <End Role="ProductPorperty" Type="Model1.Store.ProductPropertySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPorperty">
+        <PropertyRef Name="Property_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_inherits_User">
+    <End Role="User" Type="Model1.Store.UserSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Restaurant_inherits_User">
+    <End Role="User" Type="Model1.Store.UserSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Restaurant" Type="Model1.Store.UserSet_Restaurant" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="CategorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Category)">
+        <MappingFragment StoreEntitySet="CategorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartlineSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cartline)">
+        <MappingFragment StoreEntitySet="CartlineSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="uds" ColumnName="uds" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Client)">
+        <MappingFragment StoreEntitySet="UserSet_Client">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Restaurant)">
+        <MappingFragment StoreEntitySet="UserSet_Restaurant">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="schedule" ColumnName="schedule" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankcardSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Bankcard)">
+        <MappingFragment StoreEntitySet="BankcardSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="cardtype" ColumnName="cardtype" />
+          <ScalarProperty Name="cvv" ColumnName="cvv" />
+          <ScalarProperty Name="expirationdate" ColumnName="expirationdate" />
+          <ScalarProperty Name="default" ColumnName="default" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Order)">
+        <MappingFragment StoreEntitySet="OrderSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+          <ScalarProperty Name="orderAddress" ColumnName="orderAddress" />
+          <ScalarProperty Name="bankcardNumber" ColumnName="bankcardNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Product)">
+        <MappingFragment StoreEntitySet="ProductSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Property)">
+        <MappingFragment StoreEntitySet="PropertySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Comment)">
+        <MappingFragment StoreEntitySet="CommentSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPropertySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ProductProperty)">
+        <MappingFragment StoreEntitySet="ProductPropertySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProductCategory" TypeName="Model1.ProductCategory" StoreEntitySet="ProductSet">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="Id" ColumnName="Category_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OrderCartline" TypeName="Model1.OrderCartline" StoreEntitySet="CartlineSet">
+      <EndProperty Name="Order">
+        <ScalarProperty Name="Id" ColumnName="Order_Id" />
+      </EndProperty>
+      <EndProperty Name="Cartline">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientBankcard" TypeName="Model1.ClientBankcard" StoreEntitySet="BankcardSet">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Bankcard">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientOrder" TypeName="Model1.ClientOrder" StoreEntitySet="OrderSet">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Order">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductRestaurant" TypeName="Model1.ProductRestaurant" StoreEntitySet="ProductSet">
+      <EndProperty Name="Restaurant">
+        <ScalarProperty Name="Id" ColumnName="Restaurant_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RestaurantComment" TypeName="Model1.RestaurantComment" StoreEntitySet="CommentSet">
+      <EndProperty Name="Restaurant">
+        <ScalarProperty Name="Id" ColumnName="Restaurant_Id" />
+      </EndProperty>
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientComment" TypeName="Model1.ClientComment" StoreEntitySet="CommentSet">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Parent" TypeName="Model1.CategoryCategory" StoreEntitySet="CategorySet">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="Id" ColumnName="Category2_Id" />
+      </EndProperty>
+      <EndProperty Name="ParentCategory">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Category2_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductProductPorperty" TypeName="Model1.ProductProductPorperty" StoreEntitySet="ProductPropertySet">
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Product_Id" />
+      </EndProperty>
+      <EndProperty Name="ProductPorperty">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PropertyProductPorperty" TypeName="Model1.PropertyProductPorperty" StoreEntitySet="ProductPropertySet">
+      <EndProperty Name="Property">
+        <ScalarProperty Name="Id" ColumnName="Property_Id" />
+      </EndProperty>
+      <EndProperty Name="ProductPorperty">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
