@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="CategorySet" EntityType="Model1.Store.CategorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CartlineSet" EntityType="Model1.Store.CartlineSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet" EntityType="Model1.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BankcardSet" EntityType="Model1.Store.BankcardSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderSet" EntityType="Model1.Store.OrderSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductSet" EntityType="Model1.Store.ProductSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PropertySet" EntityType="Model1.Store.PropertySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommentSet" EntityType="Model1.Store.CommentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductPropertySet" EntityType="Model1.Store.ProductPropertySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet_Client" EntityType="Model1.Store.UserSet_Client" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet_Restaurant" EntityType="Model1.Store.UserSet_Restaurant" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ProductCategory" Association="Model1.Store.ProductCategory">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="Category" EntitySet="CategorySet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderCartline" Association="Model1.Store.OrderCartline">
+      <End Role="Order" EntitySet="OrderSet" />
+      <End Role="Cartline" EntitySet="CartlineSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientBankcard" Association="Model1.Store.ClientBankcard">
+      <End Role="Client" EntitySet="UserSet_Client" />
+      <End Role="Bankcard" EntitySet="BankcardSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientOrder" Association="Model1.Store.ClientOrder">
+      <End Role="Client" EntitySet="UserSet_Client" />
+      <End Role="Order" EntitySet="OrderSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductRestaurant" Association="Model1.Store.ProductRestaurant">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="Restaurant" EntitySet="UserSet_Restaurant" />
+    </AssociationSet>
+    <AssociationSet Name="RestaurantComment" Association="Model1.Store.RestaurantComment">
+      <End Role="Restaurant" EntitySet="UserSet_Restaurant" />
+      <End Role="Comment" EntitySet="CommentSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientComment" Association="Model1.Store.ClientComment">
+      <End Role="Client" EntitySet="UserSet_Client" />
+      <End Role="Comment" EntitySet="CommentSet" />
+    </AssociationSet>
+    <AssociationSet Name="Parent" Association="Model1.Store.CategoryCategory">
+      <End Role="Category" EntitySet="CategorySet" />
+      <End Role="ParentCategory" EntitySet="CategorySet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductProductPorperty" Association="Model1.Store.ProductProductPorperty">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="ProductPorperty" EntitySet="ProductPropertySet" />
+    </AssociationSet>
+    <AssociationSet Name="PropertyProductPorperty" Association="Model1.Store.PropertyProductPorperty">
+      <End Role="Property" EntitySet="PropertySet" />
+      <End Role="ProductPorperty" EntitySet="ProductPropertySet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_inherits_User" Association="Model1.Store.FK_Client_inherits_User">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Client" EntitySet="UserSet_Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Restaurant_inherits_User" Association="Model1.Store.FK_Restaurant_inherits_User">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Restaurant" EntitySet="UserSet_Restaurant" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CategorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Category2_Id" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CartlineSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uds" Type="int" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="productName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="language" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankcardSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="number" Type="bigint" Nullable="false" />
+    <Property Name="cardtype" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cvv" Type="int" Nullable="false" />
+    <Property Name="expirationdate" Type="datetime" Nullable="false" />
+    <Property Name="default" Type="bit" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Client_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orderDate" Type="datetime" Nullable="false" />
+    <Property Name="orderAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="bankcardNumber" Type="bigint" Nullable="false" />
+    <Property Name="Client_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="creationDate" Type="datetime" Nullable="false" />
+    <Property Name="stock" Type="int" Nullable="false" />
+    <Property Name="Category_Id" Type="bigint" Nullable="false" />
+    <Property Name="Restaurant_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PropertySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="rate" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="Restaurant_Id" Type="bigint" Nullable="false" />
+    <Property Name="Client_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductPropertySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Product_Id" Type="bigint" Nullable="false" />
+    <Property Name="Property_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet_Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet_Restaurant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="schedule" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="ProductCategory">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <End Role="Category" Type="Model1.Store.CategorySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderCartline">
+    <End Role="Order" Type="Model1.Store.OrderSet" Multiplicity="1" />
+    <End Role="Cartline" Type="Model1.Store.CartlineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cartline">
+        <PropertyRef Name="Order_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientBankcard">
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="1" />
+    <End Role="Bankcard" Type="Model1.Store.BankcardSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bankcard">
+        <PropertyRef Name="Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientOrder">
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="1" />
+    <End Role="Order" Type="Model1.Store.OrderSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductRestaurant">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <End Role="Restaurant" Type="Model1.Store.UserSet_Restaurant" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Restaurant_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RestaurantComment">
+    <End Role="Restaurant" Type="Model1.Store.UserSet_Restaurant" Multiplicity="1" />
+    <End Role="Comment" Type="Model1.Store.CommentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="Restaurant_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientComment">
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="1" />
+    <End Role="Comment" Type="Model1.Store.CommentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="Client_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoryCategory">
+    <End Role="Category" Type="Model1.Store.CategorySet" Multiplicity="0..1" />
+    <End Role="ParentCategory" Type="Model1.Store.CategorySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ParentCategory">
+        <PropertyRef Name="Category2_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductProductPorperty">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="1" />
+    <End Role="ProductPorperty" Type="Model1.Store.ProductPropertySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPorperty">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PropertyProductPorperty">
+    <End Role="Property" Type="Model1.Store.PropertySet" Multiplicity="1" />
+    <End Role="ProductPorperty" Type="Model1.Store.ProductPropertySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPorperty">
+        <PropertyRef Name="Property_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_inherits_User">
+    <End Role="User" Type="Model1.Store.UserSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Client" Type="Model1.Store.UserSet_Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Restaurant_inherits_User">
+    <End Role="User" Type="Model1.Store.UserSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Restaurant" Type="Model1.Store.UserSet_Restaurant" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CategorySet" EntityType="Model1.Category" />
+          <EntitySet Name="CartlineSet" EntityType="Model1.Cartline" />
+          <AssociationSet Name="ProductCategory" Association="Model1.ProductCategory">
+            <End Role="Product" EntitySet="ProductSet" />
+            <End Role="Category" EntitySet="CategorySet" />
+          </AssociationSet>
+          <EntitySet Name="UserSet" EntityType="Model1.User" />
+          <EntitySet Name="BankcardSet" EntityType="Model1.Bankcard" />
+          <EntitySet Name="OrderSet" EntityType="Model1.Order" />
+          <AssociationSet Name="OrderCartline" Association="Model1.OrderCartline">
+            <End Role="Order" EntitySet="OrderSet" />
+            <End Role="Cartline" EntitySet="CartlineSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientBankcard" Association="Model1.ClientBankcard">
+            <End Role="Client" EntitySet="UserSet" />
+            <End Role="Bankcard" EntitySet="BankcardSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientOrder" Association="Model1.ClientOrder">
+            <End Role="Client" EntitySet="UserSet" />
+            <End Role="Order" EntitySet="OrderSet" />
+          </AssociationSet>
+          <EntitySet Name="ProductSet" EntityType="Model1.Product" />
+          <EntitySet Name="PropertySet" EntityType="Model1.Property" />
+          <AssociationSet Name="ProductRestaurant" Association="Model1.ProductRestaurant">
+            <End Role="Product" EntitySet="ProductSet" />
+            <End Role="Restaurant" EntitySet="UserSet" />
+          </AssociationSet>
+          <EntitySet Name="CommentSet" EntityType="Model1.Comment" />
+          <AssociationSet Name="RestaurantComment" Association="Model1.RestaurantComment">
+            <End Role="Restaurant" EntitySet="UserSet" />
+            <End Role="Comment" EntitySet="CommentSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientComment" Association="Model1.ClientComment">
+            <End Role="Client" EntitySet="UserSet" />
+            <End Role="Comment" EntitySet="CommentSet" />
+          </AssociationSet>
+          <AssociationSet Name="Parent" Association="Model1.CategoryCategory">
+            <End Role="Category" EntitySet="CategorySet" />
+            <End Role="ParentCategory" EntitySet="CategorySet" />
+          </AssociationSet>
+          <EntitySet Name="ProductPropertySet" EntityType="Model1.ProductProperty" />
+          <AssociationSet Name="ProductProductPorperty" Association="Model1.ProductProductPorperty">
+            <End Role="Product" EntitySet="ProductSet" />
+            <End Role="ProductPorperty" EntitySet="ProductPropertySet" />
+          </AssociationSet>
+          <AssociationSet Name="PropertyProductPorperty" Association="Model1.PropertyProductPorperty">
+            <End Role="Property" EntitySet="PropertySet" />
+            <End Role="ProductPorperty" EntitySet="ProductPropertySet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="creationDate" Type="DateTime" Nullable="false" />
+          <Property Name="stock" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Model1.ProductCategory" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Restaurant" Relationship="Model1.ProductRestaurant" FromRole="Product" ToRole="Restaurant" />
+          <NavigationProperty Name="ProductPorperty" Relationship="Model1.ProductProductPorperty" FromRole="Product" ToRole="ProductPorperty" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Model1.ProductCategory" FromRole="Category" ToRole="Product" />
+          <NavigationProperty Name="Category1" Relationship="Model1.CategoryCategory" FromRole="Category" ToRole="ParentCategory" />
+          <NavigationProperty Name="Category2" Relationship="Model1.CategoryCategory" FromRole="ParentCategory" ToRole="Category" />
+          </EntityType>
+        <EntityType Name="Cartline">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uds" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Model1.OrderCartline" FromRole="Cartline" ToRole="Order" />
+          <Property Name="productName" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="ProductCategory">
+          <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+          <End Type="Model1.Category" Role="Category" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Restaurant" BaseType="Model1.User">
+          <Property Name="schedule" Type="String" Nullable="false" />
+          <Property Name="type" Type="String" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Model1.ProductRestaurant" FromRole="Restaurant" ToRole="Product" />
+          <NavigationProperty Name="Comment1" Relationship="Model1.RestaurantComment" FromRole="Restaurant" ToRole="Comment" />
+        </EntityType>
+        <EntityType Name="Client" BaseType="Model1.User">
+          <Property Name="surname" Type="String" Nullable="false" />
+          <NavigationProperty Name="Bankcard" Relationship="Model1.ClientBankcard" FromRole="Client" ToRole="Bankcard" />
+          <NavigationProperty Name="Order" Relationship="Model1.ClientOrder" FromRole="Client" ToRole="Order" />
+          <NavigationProperty Name="Comment" Relationship="Model1.ClientComment" FromRole="Client" ToRole="Comment" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="language" Type="String" Nullable="false" />
+          <Property Name="country" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bankcard">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="number" Type="Int64" Nullable="false" />
+          <Property Name="cardtype" Type="String" Nullable="false" />
+          <Property Name="cvv" Type="Int32" Nullable="false" />
+          <Property Name="expirationdate" Type="DateTime" Nullable="false" />
+          <Property Name="default" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Model1.ClientBankcard" FromRole="Bankcard" ToRole="Client" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" />
+          <Property Name="orderAddress" Type="String" Nullable="false" />
+          <NavigationProperty Name="Cartline" Relationship="Model1.OrderCartline" FromRole="Order" ToRole="Cartline" />
+          <NavigationProperty Name="Client" Relationship="Model1.ClientOrder" FromRole="Order" ToRole="Client" />
+          <Property Name="bankcardNumber" Type="Int64" Nullable="false" />
+        </EntityType>
+        <Association Name="OrderCartline">
+          <End Type="Model1.Order" Role="Order" Multiplicity="1" />
+          <End Type="Model1.Cartline" Role="Cartline" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientBankcard">
+          <End Type="Model1.Client" Role="Client" Multiplicity="1" />
+          <End Type="Model1.Bankcard" Role="Bankcard" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientOrder">
+          <End Type="Model1.Client" Role="Client" Multiplicity="1" />
+          <End Type="Model1.Order" Role="Order" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="ComplexType1">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Property">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="ProductPorperty" Relationship="Model1.PropertyProductPorperty" FromRole="Property" ToRole="ProductPorperty" />
+        </EntityType>
+        <Association Name="ProductRestaurant">
+          <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+          <End Type="Model1.Restaurant" Role="Restaurant" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Restaurant" Relationship="Model1.RestaurantComment" FromRole="Comment" ToRole="Restaurant" />
+          <Property Name="content" Type="String" Nullable="false" />
+          <Property Name="rate" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Model1.ClientComment" FromRole="Comment" ToRole="Client" />
+        </EntityType>
+        <Association Name="RestaurantComment">
+          <End Type="Model1.Restaurant" Role="Restaurant" Multiplicity="1" />
+          <End Type="Model1.Comment" Role="Comment" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientComment">
+          <End Type="Model1.Client" Role="Client" Multiplicity="1" />
+          <End Type="Model1.Comment" Role="Comment" Multiplicity="*" />
+        </Association>
+        <Association Name="CategoryCategory">
+          <End Type="Model1.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="Model1.Category" Role="ParentCategory" Multiplicity="*" />
+        </Association>
+        <EntityType Name="ProductProperty">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="value" Type="String" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Model1.ProductProductPorperty" FromRole="ProductPorperty" ToRole="Product" />
+          <NavigationProperty Name="Property" Relationship="Model1.PropertyProductPorperty" FromRole="ProductPorperty" ToRole="Property" />
+        </EntityType>
+        <Association Name="ProductProductPorperty">
+          <End Type="Model1.Product" Role="Product" Multiplicity="1" />
+          <End Type="Model1.ProductProperty" Role="ProductPorperty" Multiplicity="*" />
+        </Association>
+        <Association Name="PropertyProductPorperty">
+          <End Type="Model1.Property" Role="Property" Multiplicity="1" />
+          <End Type="Model1.ProductProperty" Role="ProductPorperty" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="CategorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Category)">
+        <MappingFragment StoreEntitySet="CategorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartlineSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cartline)">
+        <MappingFragment StoreEntitySet="CartlineSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="uds" ColumnName="uds" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Client)">
+        <MappingFragment StoreEntitySet="UserSet_Client">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Restaurant)">
+        <MappingFragment StoreEntitySet="UserSet_Restaurant">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="schedule" ColumnName="schedule" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankcardSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Bankcard)">
+        <MappingFragment StoreEntitySet="BankcardSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="cardtype" ColumnName="cardtype" />
+          <ScalarProperty Name="cvv" ColumnName="cvv" />
+          <ScalarProperty Name="expirationdate" ColumnName="expirationdate" />
+          <ScalarProperty Name="default" ColumnName="default" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Order)">
+        <MappingFragment StoreEntitySet="OrderSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+          <ScalarProperty Name="orderAddress" ColumnName="orderAddress" />
+          <ScalarProperty Name="bankcardNumber" ColumnName="bankcardNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Product)">
+        <MappingFragment StoreEntitySet="ProductSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Property)">
+        <MappingFragment StoreEntitySet="PropertySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Comment)">
+        <MappingFragment StoreEntitySet="CommentSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPropertySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ProductProperty)">
+        <MappingFragment StoreEntitySet="ProductPropertySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProductCategory" TypeName="Model1.ProductCategory" StoreEntitySet="ProductSet">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="Id" ColumnName="Category_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OrderCartline" TypeName="Model1.OrderCartline" StoreEntitySet="CartlineSet">
+      <EndProperty Name="Order">
+        <ScalarProperty Name="Id" ColumnName="Order_Id" />
+      </EndProperty>
+      <EndProperty Name="Cartline">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientBankcard" TypeName="Model1.ClientBankcard" StoreEntitySet="BankcardSet">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Bankcard">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientOrder" TypeName="Model1.ClientOrder" StoreEntitySet="OrderSet">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Order">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductRestaurant" TypeName="Model1.ProductRestaurant" StoreEntitySet="ProductSet">
+      <EndProperty Name="Restaurant">
+        <ScalarProperty Name="Id" ColumnName="Restaurant_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RestaurantComment" TypeName="Model1.RestaurantComment" StoreEntitySet="CommentSet">
+      <EndProperty Name="Restaurant">
+        <ScalarProperty Name="Id" ColumnName="Restaurant_Id" />
+      </EndProperty>
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientComment" TypeName="Model1.ClientComment" StoreEntitySet="CommentSet">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Parent" TypeName="Model1.CategoryCategory" StoreEntitySet="CategorySet">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="Id" ColumnName="Category2_Id" />
+      </EndProperty>
+      <EndProperty Name="ParentCategory">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Category2_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductProductPorperty" TypeName="Model1.ProductProductPorperty" StoreEntitySet="ProductPropertySet">
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Product_Id" />
+      </EndProperty>
+      <EndProperty Name="ProductPorperty">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PropertyProductPorperty" TypeName="Model1.PropertyProductPorperty" StoreEntitySet="ProductPropertySet">
+      <EndProperty Name="Property">
+        <ScalarProperty Name="Id" ColumnName="Property_Id" />
+      </EndProperty>
+      <EndProperty Name="ProductPorperty">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
